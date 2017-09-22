@@ -1,6 +1,7 @@
-# clock
+# Vuejs PWA Clock Inspiration Samsung S8 (log Screen)
 
-> A Vue.js project
+> A Vue.js project pwa
+![./screen.png](./screen.png)
 
 ## Build Setup
 

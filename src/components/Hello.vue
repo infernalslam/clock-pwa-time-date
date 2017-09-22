@@ -15,7 +15,7 @@ export default {
     return {
       updatedTime1: '',
       updatedTime2: '',
-      updateDate: 's'
+      updateDate: ''
     }
   },
   methods: {
