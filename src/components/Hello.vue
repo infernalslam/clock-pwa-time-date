@@ -13,18 +13,22 @@ export default {
   name: 'hello',
   data () {
     return {
+      updatedTime1: '',
+      updatedTime2: '',
+      updateDate: 's'
     }
   },
-  computed: {
-    updatedTime1 () {
-      return moment().format('H')
-    },
-    updatedTime2 () {
-      return moment().format('mm')
-    },
-    updateDate () {
-      return moment().format('dddd, Do MMMM YYYY')
+  methods: {
+    updatedTime () {
+      this.updatedTime1 = moment().format('H')
+      this.updatedTime2 = moment().format('mm')
+      this.updateDate = moment().format('dddd, Do MMMM YYYY')
     }
+  },
+  mounted () {
+    setInterval(() => {
+      this.updatedTime()
+    }, 1000)
   }
 }
 </script>
