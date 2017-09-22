@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="centered1">
+    <div class='centered1'>
       10
     </div>
-    <div class="centered2">
+    <div class='centered2'>
       17
     </div>
-    <div class="centered3"> {{ date }} </div>
+    <div class='centered3'> {{ date }} </div>
   </div>
 </template>
 
@@ -18,11 +18,21 @@ export default {
     return {
       date: moment().format('dddd, Do MMMM YYYY')
     }
+  },
+  methods: {
+    // updatedBattery () {
+    //   navigator.getBattery().then((res) => {
+    //     console.log(res)
+    //   })
+    // }
+  },
+  mounted () {
+    // this.updatedBattery()
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
 
 .centered1 {
