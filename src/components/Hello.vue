@@ -1,12 +1,9 @@
 <template>
   <div>
-    <div class='centered1'>
-      10
-    </div>
-    <div class='centered2'>
-      17
-    </div>
-    <div class='centered3'> {{ date }} </div>
+    <div class='centered1'> {{ updatedTime1 }} </div>
+    <div class='centered2'> {{ updatedTime2 }} </div>
+    <div class='centered3'> {{ updateDate }} </div>
+    <!-- <div class="battery"> {{ updatedBattery }} % </div> -->
   </div>
 </template>
 
@@ -16,18 +13,18 @@ export default {
   name: 'hello',
   data () {
     return {
-      date: moment().format('dddd, Do MMMM YYYY')
     }
   },
-  methods: {
-    // updatedBattery () {
-    //   navigator.getBattery().then((res) => {
-    //     console.log(res)
-    //   })
-    // }
-  },
-  mounted () {
-    // this.updatedBattery()
+  computed: {
+    updatedTime1 () {
+      return moment().format('H')
+    },
+    updatedTime2 () {
+      return moment().format('mm')
+    },
+    updateDate () {
+      return moment().format('dddd, Do MMMM YYYY')
+    }
   }
 }
 </script>
@@ -59,6 +56,17 @@ export default {
 .centered3 {
   position: fixed;
   top: 60%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+.battery {
+  position: fixed;
+  top: 63%;
   left: 50%;
   /* bring your own prefixes */
   transform: translate(-50%, -50%);
