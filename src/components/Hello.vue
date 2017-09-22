@@ -16,7 +16,7 @@ export default {
   name: 'hello',
   data () {
     return {
-      date: moment().format('LLLL')
+      date: moment().format('dddd, Do MMMM YYYY')
     }
   }
 }
